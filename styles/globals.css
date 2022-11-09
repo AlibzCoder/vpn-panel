@@ -1,0 +1,52 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+.custom-data-grid {
+  margin: 0 auto;
+  max-width: 900px;
+}
+.custom-data-grid .MuiDataGrid-root{
+  background: #141414;
+}
+.custom-data-grid .MuiDataGrid-root *{
+  color: #FFF;
+}
+.custom-data-grid .MuiDataGrid-columnHeaderTitleContainerContent *,
+.custom-data-grid .MuiDataGrid-columnHeader .MuiDataGrid-iconSeparator *,
+.custom-data-grid .MuiButton-root{
+  color : #00df00 !important;
+}
+.custom-data-grid .MuiDataGrid-columnHeader:last-child .MuiDataGrid-iconSeparator{
+  display: none;
+}
+.custom-data-grid .MuiDataGrid-columnHeaders{
+  padding: 0 2.5em;
+}
+.custom-data-grid .MuiDataGrid-row {
+  padding: 0 2.5em;
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+}
+.custom-data-grid .MuiDataGrid-row .MuiDataGrid-cell{
+  border-bottom: none;
+}
+
+.MuiDataGrid-menuList .MuiMenuItem-root{
+  display: block;
+}
