@@ -51,8 +51,9 @@ export default function Home() {
                 setCookie("Authorization",res.data["Authorization"]);
                 setCookie("RefreshToken",res.data["RefreshToken"]);
                 getServersTokens()
-                    .then(()=>router.push("/"))
-                    .catch((err)=>{
+                    .then(()=>{
+			router.push("/");
+		    }).catch((err)=>{
                         console.log(err);
                         setApiError("Authentication Failed");
                     });
@@ -75,11 +76,11 @@ export default function Home() {
                 const {ip} = res.data[i];
                 try{
                     await loginToServer(ip);
-                    resolve(true);
                 }catch(err){
                     throw err;
                 }
             }
+	    resolve(true);
         }).catch(err=>reject(err));
     })
   }
@@ -92,14 +93,15 @@ export default function Home() {
             if(typeof res.data === 'object' && !Array.isArray(res.data) && res.data !== null){
                 if(res.data.hasOwnProperty('Authorization') && res.data.hasOwnProperty('RefreshToken')){
                     localStorage.setItem(ip,JSON.stringify(res.data));
-                    resolve(true);
+                    //resolve(true);
                 }else{
-                    reject(false);
+                    //reject(false);
                 }
             }else{
-                reject(false);
+                //reject(false);
             }
-        }).catch(err=>reject(err));
+	    resolve(true);
+        }).catch(err=>{resolve(true);/*reject(err)*/});
     });
   }
 

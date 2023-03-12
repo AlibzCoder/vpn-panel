@@ -33,6 +33,11 @@ a {
 .custom-data-grid .MuiButton-root{
   color : #00df00 !important;
 }
+
+.custom-data-grid .green-indicator *{
+  color : #00df00 !important;
+}
+
 .custom-data-grid .MuiDataGrid-columnHeader:last-child .MuiDataGrid-iconSeparator{
   display: none;
 }

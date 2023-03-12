@@ -37,7 +37,7 @@ export async function getServerSideProps(context : any) {
     }
   }
 
-  let res = await fetch("http://142.132.184.24:3000/api/servers", {
+  let res = await fetch("http://0.0.0.0:3000/api/servers", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",

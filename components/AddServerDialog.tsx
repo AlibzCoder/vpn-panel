@@ -61,7 +61,7 @@ export default function AddServerDialog({open , setOpen , refreshData} : AddServ
         ok = false;
     }
 
-    const regexExp = /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/gi;
+    const regexExp = /^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\-]*[A-Za-z0-9])$/;
     if(serverIP && !regexExp.test(serverIP)){
         setServerIPError("Invalid IP");
         ok = false;

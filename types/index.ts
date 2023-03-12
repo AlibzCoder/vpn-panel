@@ -16,7 +16,8 @@ export type UserProperties = {
     expire_date : string,
     creation_date : string,
     server_id : string,
-    server_name : string
+    server_name : string,
+    checkEnabled : boolean
 }
 
 export type Error = {
